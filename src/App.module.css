@@ -1,0 +1,134 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.headerContainer{
+    max-width: 900px;
+    margin: 40px auto;
+}
+.container{
+    max-width: 900px;
+    display: flex;
+    margin: auto;
+}
+
+.container .leftSide{
+    flex: 1;
+    margin-right: 40px;
+}
+.container .leftSide h4{
+    color: #3A4B5C;
+    margin-bottom: 15px;
+    font-size: 40px;
+}
+.container .leftSide p{
+    font-size: 1rem;
+    margin-bottom: 40px;
+    color: #647D8B;
+}
+.container .leftSide input{
+    width: 100%;
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-bottom: 2px solid rgba(150,163, 171, .5);
+}
+.container .leftSide input:disabled{
+    opacity: .5;
+}
+
+.container .leftSide button{
+    width: 100%;
+    background-color: #227c9d;
+    color: #FFF;
+    font-size: 15px;
+    margin-top: 40px;
+    padding: 15px 0px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+.container .leftSide button:hover{
+    opacity: .7;
+}
+.container .leftSide button:disabled{
+    opacity: .5;
+    cursor:auto;
+}
+.container .rightSide{
+    flex: 1;
+    margin-left: 40px;
+    display: flex;
+}
+
+.container .rightSide .grid{
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+    gap: 20px;
+}
+
+.container .rightSide .big{
+    flex: 1;
+    display: flex;
+}
+
+.container .rightSide .big .BtnVoltar{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #227c9d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -35px;
+    margin-top: 140px;
+    cursor: pointer;
+    transition: all ease .4s;
+}
+.container .rightSide .big .BtnVoltar:hover{
+    opacity: .7;
+}
+
+@media (max-width: 770px){
+    .headerContainer{
+        padding: 0 20px;
+    }
+
+    .container{
+        padding: 0 20px;
+        flex-direction: column;
+    }
+
+    .container .leftSide{
+        margin-right:0 ;
+    }
+    .container .rightSide{
+        margin-left: 0;
+        margin: 50px 0;
+    }
+
+    .container .rightSide .big .BtnVoltar{
+        margin-left: 0px;
+        margin-top: 0px;
+        border-radius: 10px;
+    }
+
+}
+
+@media (max-width: 400px){
+    .container .rightSide .grid{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+}
