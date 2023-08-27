@@ -1,5 +1,5 @@
 import styles from './App.module.css';
-import {useReducer, useState} from 'react';
+import { useState} from 'react';
 import logoPower from './assetss/powered.png';
 import './componetes/GridItem/GridIndex';
 import logoVoltar from './assetss/leftarrow.png'
